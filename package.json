@@ -1,0 +1,28 @@
+{
+  "name": "multi-device-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rsbuild dev",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview",
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.2.18",
+    "@rsbuild/plugin-react": "^1.1.0",
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "@unocss/webpack": "66.6.0",
+    "typescript": "^5.6.3",
+    "unocss": "66.6.0",
+    "vitest": "^4.0.18"
+  }
+}
