@@ -82,6 +82,16 @@ function convertPxByProperty(prop: string, value: string): string {
     return value;
   }
 
+  // Keep advanced layout/typography expressions untouched.
+  // Desktop adaptive rules frequently rely on px bounds inside these functions.
+  if (/clamp\(|minmax\(|min\(|max\(|calc\(/.test(value)) {
+    return value;
+  }
+
+  if (prop === 'grid-template-columns' || prop === 'grid-template-rows') {
+    return value;
+  }
+
   if (prop === 'margin' || prop === 'padding' || prop === 'inset') {
     return convertSpacingShorthand(value);
   }
